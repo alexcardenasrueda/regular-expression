@@ -60,15 +60,16 @@ https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S*
 ```
 
 Explain step to step
-Match exactly http
-Letter “S” can be or can’t be, for this reason we use “?” s?
-Follow this is mandatory a character :
-Slash character is a reserved character so don’t remember escape this \/\/
-Until here we find Strings that contains http:// or https://
-After that we need to create a class to indicate a group of characters including (-) and (.), for this add to our regex [\w\-\.]+
-This class indicates characters including (-) and (.) and to appear at least once
-Next we wanna find a point character to separate TLD (Top level domains. Examples: .com , .org , .mx , etc) \.\2{2,5}
-Finally the URL complement can be file names, paths and anything but never there are spaces character so we exclude this spaces in our regex \/?\S*
+- Match exactly ```http```
+- Letter “S” can be or can’t be, for this reason we use “?” ```s?```
+- Follow this is mandatory a character ```:```
+- Slash character is a reserved character so don’t remember escape this ```\/\/```
+- Until here we find Strings that contains ```http://``` or``` https://```
+- After that we need to create a class to indicate a group of characters including (-) and (.), for this add to our regex ```[\w\-\.]+```
+-- This class indicates characters including (-) and (.) and to appear at least once
+- Next we wanna find a point character to separate TLD (Top level domains. Examples: .com , .org , .mx , etc) ```\.\2{2,5}```
+- Finally the URL complement can be file names, paths and anything but never there are spaces character so we exclude this spaces in our regex``` \/?\S*```
+
 Copy snipet of code and write regex step to step to see amazing power of regular expressions!
 
 This information can help to understand a little more about regex
